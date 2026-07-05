@@ -9,13 +9,31 @@
     "tsConfigPath": "apps/orders/tsconfig.app.json"
   },
   "projects": {
-    "orders": {
-      "type": "application",
-      "root": "apps/orders",
-      "entryFile": "main",
-      "sourceRoot": "apps/orders/src",
+    "contracts": {
+      "type": "library",
+      "root": "libs/contracts",
+      "entryFile": "index",
+      "sourceRoot": "libs/contracts/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/orders/tsconfig.app.json"
+        "tsConfigPath": "libs/contracts/tsconfig.lib.json"
+      }
+    },
+    "delivery": {
+      "type": "application",
+      "root": "apps/delivery",
+      "entryFile": "main",
+      "sourceRoot": "apps/delivery/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/delivery/tsconfig.app.json"
+      }
+    },
+    "kitchen": {
+      "type": "application",
+      "root": "apps/kitchen",
+      "entryFile": "main",
+      "sourceRoot": "apps/kitchen/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kitchen/tsconfig.app.json"
       }
     },
     "notifications": {
@@ -27,13 +45,13 @@
         "tsConfigPath": "apps/notifications/tsconfig.app.json"
       }
     },
-    "contracts": {
-      "type": "library",
-      "root": "libs/contracts",
-      "entryFile": "index",
-      "sourceRoot": "libs/contracts/src",
+    "orders": {
+      "type": "application",
+      "root": "apps/orders",
+      "entryFile": "main",
+      "sourceRoot": "apps/orders/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/contracts/tsconfig.lib.json"
+        "tsConfigPath": "apps/orders/tsconfig.app.json"
       }
     }
   }
